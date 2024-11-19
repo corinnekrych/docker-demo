@@ -29,7 +29,7 @@ jobs:
         needs: Build
         uses: cloudbees-io/kaniko/.cloudbees/testing
         with:
-          context: cloudbees-io/kaniko/.cloudbees/testing
+          context: .
           destination: docker.io/corinnekrych/docker-demo:0.0.1-${{cloudbees.version}}
           verbosity: debug
           send-artifact-info: true
