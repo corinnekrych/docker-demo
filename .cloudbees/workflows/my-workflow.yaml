@@ -18,8 +18,8 @@ jobs:
         uses: cloudbees-io/configure-oci-credentials@v1
         with:
           registry: https://index.docker.io/v1/
-          username: ${{ vars.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build container image with Kaniko
         uses: cloudbees-io/kaniko/.cloudbees/testing
         with:
