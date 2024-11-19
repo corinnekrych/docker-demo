@@ -24,7 +24,7 @@ jobs:
         uses: docker://eclipse-temurin:21-alpine
         shell: sh
         run: |
-          ./gradlew clean build;
+          ./gradlew -d -S clean build;
       - name: Build container image with Kaniko
         needs: Build
         uses: cloudbees-io/kaniko/.cloudbees/testing
